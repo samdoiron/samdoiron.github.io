@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Sam Doiron - Developer - @conlectus
+    <name> -- <role> -- <twitter>
+
+# TECHNOLOGY COLOPHON
+    CSS3, HTML5
