@@ -150,6 +150,7 @@ article h1 + p {
 }
 
 p {
+    margin-top: 32px;
     margin-bottom: 32px;
 }
 
