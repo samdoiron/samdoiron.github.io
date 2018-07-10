@@ -2,33 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on The Very Same</title>
-    <link>https://theverysa.me/post/index.xml</link>
+    <link>https://theverysa.me/post/</link>
     <description>Recent content in Posts on The Very Same</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 04 Mar 2017 18:15:00 -0400</lastBuildDate>
-    <atom:link href="https://theverysa.me/post/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://theverysa.me/post/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
-      <title>On the cruelty of really teaching computer science</title>
+      <title>What Composition over Inheritance Means</title>
       <link>https://theverysa.me/post/hello-world/</link>
       <pubDate>Sat, 04 Mar 2017 18:15:00 -0400</pubDate>
       
       <guid>https://theverysa.me/post/hello-world/</guid>
-      <description>&lt;p&gt;This is where the content goes, you see. &amp;ldquo;Content is king&amp;rdquo;. I need to keep rambling
-data and content, of course. One of the primary things you do on a website
-is use &lt;a href=&#34;https://en.wikipedia.org/wiki/hypertext&#34;&gt;hyperlinks&lt;/a&gt;. From a&amp;hellip;to z.
-on a bit to test the wrap-around on the browser. Styling requires realistic testing&lt;/p&gt;
+      <description>&lt;p&gt;I recently stumbled upon a promising Ruby web framework called &lt;a href=&#34;#&#34;&gt;Hanami&lt;/a&gt;, whose
+description pitch immediately grabbed me. &lt;em&gt;&amp;ldquo;We havent made the mistakes
+of &lt;a href=&#34;#&#34;&gt;that other framework&lt;/a&gt;. We&amp;rsquo;ve designed from scratch with the principles of
+the Clean Architecture and Domain Driven Design in mind!&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This is for emphasis.&lt;/em&gt; It works well. &lt;strong&gt;Even more&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.&amp;rdquo;&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

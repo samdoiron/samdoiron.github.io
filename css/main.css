@@ -10,26 +10,21 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+/* rgb(0, 115, 180) is the Dictionary of Color basic blue */
+
 #instantclick-bar {
-    background: #651FFF;
+    background: rgb(255, 80, 0);
 }
 
 html {
     color: #222;
-    font-size: 1em;
+    font-size: 18px;
     line-height: 1.57;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
 }
 
-::-moz-selection {
-    background: #651FFF;
-    color: white;
-    text-shadow: none;
-}
-
 ::selection {
-    background: #651FFF;
-    color: white;
+    background: rgba(0, 0, 0, .1);
     text-shadow: none;
 }
 
@@ -95,13 +90,20 @@ textarea {
    ========================================================================== */
 
 body {
-    padding: 24px;
-    max-width: 60ch;
+    padding: 1em;
+    min-width: 25em;
+    max-width: 35em;
     margin: 0 auto;
 }
 
 .site-name {
     font-size: 1.25em;
+}
+
+.site-name a,
+.site-name a:visited {
+    color: inherit;
+    text-decoration: none;
 }
 
 header {
@@ -117,7 +119,7 @@ header {
 }
 
 .slashes {
-    color: #651FFF;
+    color: rgb(255, 80, 0);
 }
 
 .title {
@@ -126,8 +128,17 @@ header {
     margin-bottom: .75em;
 }
 
-.title a:not(:hover) {
-    background: none;
+article h1 {
+    font-size: 1.1em;
+    margin: 0;
+}
+
+article img {
+    max-width: 100%;
+}
+
+.title a {
+    text-decoration: none;
 }
 
 .meta {
@@ -135,8 +146,12 @@ header {
     display: inline-block;
 }
 
-article p:first-of-type {
+article h1 + p {
     margin-top: 0;
+}
+
+p {
+    margin-bottom: 32px;
 }
 
 h1 {
@@ -144,27 +159,18 @@ h1 {
     margin-bottom: 0.4em;
 }
 
+a {
+    color: #c13d00;
+}
+
 a,
 a:visited {
-    color: inherit;
-    text-decoration: none;
-    
-    text-decoration: none;
-    background-image: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(#444, #444);
-    background-size: .05em 1px, .05em 1px, 1px 1px;
-    background-repeat: no-repeat, no-repeat, repeat-x;
-    background-position: 0% 90%, 100% 90%, 0% 90%;
+    text-decoration-skip: ink;
+}
 
-    text-shadow: .03em 0 white,
-     -.03em 0 white,
-     0 .03em white, 0 -.03em white,
-     .06em 0 white,
-     -.06em 0 white,
-     .09em 0 white,
-     -.09em 0 white,
-     .12em 0 white,
-     -.12em 0 white, .15em 0 white,
-     -.15em 0 white;
+.highlight pre {
+    padding: 16px;
+    font-size: 14px;
 }
 
 /* ==========================================================================
@@ -260,3 +266,4 @@ a:visited {
         page-break-after: avoid;
     }
 }
+

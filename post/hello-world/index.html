@@ -8,7 +8,7 @@
         <meta name="author" content="Samuel Doiron">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#651FFF">
-        <link rel="stylesheet" href="/all.fdbc4db1d4a42494f0bc6de08b8c3ed8.css">
+        <link rel="stylesheet" href="https://theverysa.me/all.css">
     </head>
     <body>
 
@@ -20,25 +20,45 @@
 <article>
     <div class="meta">
     <span class="date">6 March 2017</span>,
-    <span class="words">3 min read</span>
+    <span class="words">1 min read</span>
 </div>
-    <h1 class="title">On the cruelty of really teaching computer science</h1>
-    <p>This is where the content goes, you see. &ldquo;Content is king&rdquo;. I need to keep rambling
-data and content, of course. One of the primary things you do on a website
-is use <a href="https://en.wikipedia.org/wiki/hypertext">hyperlinks</a>. From a&hellip;to z.
-on a bit to test the wrap-around on the browser. Styling requires realistic testing</p>
+    <h1 class="title">What Composition over Inheritance Means</h1>
+    <p>I recently stumbled upon a promising Ruby web framework called <a href="#">Hanami</a>, whose
+description pitch immediately grabbed me. <em>&ldquo;We havent made the mistakes
+of <a href="#">that other framework</a>. We&rsquo;ve designed from scratch with the principles of
+the Clean Architecture and Domain Driven Design in mind!&rdquo;</em></p>
 
 <p></p>
 
-<p><em>This is for emphasis.</em> It works well. <strong>Even more</strong>.</p>
+<p>First off, we use composition over inheritance! So instead of</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#069;font-weight:bold">class</span> <span style="color:#0a8;font-weight:bold">FooController</span> <span style="color:#555">&lt;</span> <span style="color:#360">ActiveController</span>
+  <span style="color:#09f;font-style:italic"># ... </span>
+<span style="color:#069;font-weight:bold">end</span></code></pre></div>
+<p>you write</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#069;font-weight:bold">class</span> <span style="color:#0a8;font-weight:bold">FooController</span>
+  <span style="color:#069">include</span> <span style="color:#360">Hanami</span><span style="color:#555">::</span><span style="color:#360">Controller</span>
+  <span style="color:#09f;font-style:italic"># ...</span>
+<span style="color:#069;font-weight:bold">end</span></code></pre></div>
+<p>🤦 and suddenly my excitement had ended.</p>
 
-<p>&ldquo;On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.&rdquo;</p>
+<h1 id="a-brief-aside">A brief aside</h1>
 
-<p>&ldquo;On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.&rdquo;</p>
+<p>At my day job, there is a module that aims to aid in helping to test a
+particularly complicated set of entities. Using that interface typically
+looks something like this (names redacted).</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">setup <span style="color:#069;font-weight:bold">do</span>
+  setup_foo_helper(<span style="color:#366">name</span>: <span style="color:#c30">&#39;Something&#39;</span>)
+<span style="color:#069;font-weight:bold">end</span>
 
-<p>&ldquo;On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.&rdquo;</p>
+<span style="color:#366">test</span> <span style="color:#c30">&#39;field has the right value&#39;</span> <span style="color:#069;font-weight:bold">do</span>
+  assert_field <span style="color:#c30">&#39;some_field&#39;</span>, <span style="color:#f60">10</span>
+<span style="color:#069;font-weight:bold">end</span></code></pre></div>
+<p>Now, do you have <em>any</em> idea what this code does? What behaviour this is
+testing? Where these methods are even coming from? Well no, and neither
+do I. This is the problem that is addressed by prefering composition to
+inheritance. Disambiguation, and easy of understanding.</p>
 </article>
 
-    <script src="/all.685be4f5daa96c40c3d422391c405507.js" async data-no-instant></script>
+    <script src="/all.js" async data-no-instant></script>
     </body>
 </html>
